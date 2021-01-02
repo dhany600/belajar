@@ -1,12 +1,20 @@
 body,
 html {
+  width: 100%;
+  height: 100%;
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
 }
 header {
-  padding-left: 80px;
-  padding-right: 50px;
-  padding-top: 40px;
+  padding-top: 20px;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  display: inline;
 }
 header nav .navBarText {
   text-decoration: none;
@@ -14,47 +22,103 @@ header nav .navBarText {
   margin-left: 35px;
   font-weight: 600;
 }
+@media only screen and (max-width: 600px) {
+  header nav .navBarText {
+    display: block;
+    padding: 10px;
+    background-color: #282F65;
+    border: 1px solid #FFA800;
+    text-align: center;
+    padding-left: 0px;
+    margin-left: 0;
+    color: white;
+  }
+}
 header nav .logo {
-  margin-right: 80px;
+  margin-left: 10px;
+}
+@media only screen and (max-width: 600px) {
+  header nav .logo {
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 header nav .getStarted {
-  margin-left: 355px;
   margin-top: -20px;
+  float: right;
+}
+@media only screen and (max-width: 600px) {
+  header nav .getStarted {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+}
+.nopadding {
+  padding: 0;
+  margin: 0;
 }
 section.home-section-1 {
   margin-bottom: 150px;
 }
 section.home-section-1 .slider {
   width: 100%;
+  z-index: 3;
 }
-section.home-section-1 .imgSlider {
+@media only screen and (max-width: 600px) {
+  section.home-section-1 .slider {
+    top: 0%;
+  }
+}
+section.home-section-1 .sec1Rectangle {
+  width: 100%;
+  height: 100px;
+  background-color: white;
   position: absolute;
-  z-index: 2;
-  width: 1100px;
-  margin-top: -80px;
-  margin-left: -100px;
+  z-index: 3;
+  margin-top: -45px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px grey;
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-1 .sec1Rectangle {
+    width: 80%;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px grey;
+    z-index: 0;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 section.home-section-1 #a1 {
   position: absolute;
   z-index: 3;
   color: #AEAEAE;
-  margin-top: -30px;
   font-size: 16px;
-  margin-left: -30px;
+  margin-top: 15px;
+  margin-left: 30px;
 }
 section.home-section-1 #p1 {
   position: absolute;
   z-index: 3;
   font-size: 18px;
-  margin-left: -30px;
-  margin-top: 0px;
+  margin-left: 30px;
+  margin-top: 50px;
   font-weight: 600;
 }
 section.home-section-1 #a2 {
   position: absolute;
   z-index: 3;
   color: #AEAEAE;
-  margin-top: -30px;
+  margin-top: 15px;
   font-size: 16px;
   margin-left: 30px;
 }
@@ -63,30 +127,30 @@ section.home-section-1 #p2 {
   z-index: 3;
   font-size: 18px;
   margin-left: 30px;
-  margin-top: 0px;
+  margin-top: 50px;
   font-weight: 600;
 }
 section.home-section-1 #a3 {
   position: absolute;
   z-index: 3;
   color: #AEAEAE;
-  margin-top: -30px;
+  margin-top: 15px;
   font-size: 16px;
-  margin-left: 22px ;
+  margin-left: 22px;
 }
 section.home-section-1 #p3 {
   position: absolute;
   z-index: 3;
   font-size: 18px;
-  margin-left: 22px ;
-  margin-top: 0px;
+  margin-left: 22px;
+  margin-top: 50px;
   font-weight: 600;
 }
 section.home-section-1 #a4 {
   position: absolute;
   z-index: 3;
   color: #AEAEAE;
-  margin-top: -30px;
+  margin-top: 15px;
   font-size: 16px;
   margin-left: 60px;
 }
@@ -95,8 +159,57 @@ section.home-section-1 #p4 {
   z-index: 3;
   font-size: 18px;
   margin-left: 60px;
-  margin-top: 0px;
+  margin-top: 50px;
   font-weight: 600;
+}
+section.home-section-1 #a5 {
+  position: relative;
+  z-index: 3;
+  color: #AEAEAE;
+  margin-top: 15px;
+  font-size: 16px;
+  top: 20%;
+  right: 0%;
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-1 #a1,
+  section.home-section-1 #p1 {
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    left: 20%;
+  }
+  section.home-section-1 #a2,
+  section.home-section-1 #p2 {
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    left: 20%;
+  }
+  section.home-section-1 #a3,
+  section.home-section-1 #p3 {
+    margin-left: auto;
+    margin-right: auto;
+    top: 200px;
+    left: 20%;
+  }
+  section.home-section-1 #a4,
+  section.home-section-1 #p4 {
+    margin-left: auto;
+    margin-right: auto;
+    top: 300px;
+    left: 20%;
+  }
+  section.home-section-1 #a5 {
+    top: 400px;
+    display: block;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-1 {
+    margin-bottom: -50px;
+  }
 }
 section.home-section-2 {
   margin-bottom: 150px;
@@ -105,33 +218,62 @@ section.home-section-2 #section2H2 {
   color: #3E3E3E;
   margin-left: 50px;
   margin-bottom: 30px;
-  padding-right: 240px;
   margin-top: 100px;
   font-weight: 700;
+  max-width: 400px;
 }
 section.home-section-2 #pSection2 {
   color: #3E3E3E;
   font-size: 18px;
   margin-left: 50px;
   margin-bottom: 30px;
-  padding-right: 100px;
+  max-width: 490px;
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-2 #pSection2,
+  section.home-section-2 #section2H2 {
+    margin-right: 50px;
+  }
 }
 section.home-section-2 #a1Section2 {
   color: #FFA800;
   font-size: 18px;
   margin-left: 50px;
 }
-section.home-section-2 #section2Absolute {
+section.home-section-2 #section2Img {
+  width: 100%;
+  padding-right: 50px;
+}
+section.home-section-2 .sec2-container-box {
+  width: 80%;
+  height: 100px;
+  background-color: white;
   position: absolute;
-  z-index: 2;
-  margin-left: -625px;
-  margin-top: 350px;
+  z-index: 3;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px grey;
+  top: 90%;
+  left: 45px;
 }
 section.home-section-2 #playButton {
   position: absolute;
   z-index: 3;
-  margin-left: -425px;
-  margin-top: 410px;
+  left: 30%;
+  top: 95%;
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-2 #section2Img {
+    padding-right: 0px;
+    margin-top: 50px;
+  }
+  section.home-section-2 #playButton {
+    left: 20%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-2 {
+    margin-bottom: -50px;
+  }
 }
 section.home-section-3 {
   margin-bottom: 150px;
@@ -161,37 +303,52 @@ section.home-section-3 .prelative-box .content-box {
   margin-right: 5px;
   margin-left: 5px;
 }
+@media only screen and (max-width: 600px) {
+  section.home-section-3 {
+    margin-bottom: 25px;
+  }
+}
 section.home-section-4 {
   margin-bottom: 150px;
 }
 section.home-section-4 #sec4Img1 {
   width: 100%;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 section.home-section-4 #sec4Img2 {
   position: absolute;
   z-index: 2;
-  margin-left: -500px;
-  margin-top: 30px;
+  width: 100%;
+  left: 5%;
+  top: 10%;
 }
-section.home-section-4 #sec4H2 {
-  font-weight: 700;
-  color: #3E3E3E;
-  padding-right: 200px;
-  margin-bottom: 25px;
-  margin-top: 70px;
+@media only screen and (max-width: 600px) {
+  section.home-section-4 #sec4Img1 {
+    width: 90%;
+  }
+  section.home-section-4 #sec4Img2 {
+    width: 90%;
+  }
 }
 section.home-section-4 .content-box-sec4-1 {
   margin-left: 100px;
 }
+section.home-section-4 #sec4H2 {
+  font-weight: 700;
+  color: #3E3E3E;
+  margin-bottom: 25px;
+  margin-top: 70px;
+  max-width: 465px;
+}
 section.home-section-4 #sec4TittleCaption {
   font-size: 20px;
   color: #626262;
-  padding-right: 130px;
+  max-width: 540px;
 }
 section.home-section-4 .sec4ListNumber {
-  margin-left: -20px;
-  width: 60px;
+  position: relative;
+  width: 55px;
+  left: -20px;
 }
 section.home-section-4 .sec4ListTittle {
   font-size: 16px;
@@ -201,6 +358,21 @@ section.home-section-4 .sec4ListTittle {
 section.home-section-4 .sec4ListCaption {
   font-size: 14px;
   color: #626262;
+  max-width: 530px;
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-4 .content-box-sec4-1 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  section.home-section-4 .sec4ListTittle {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-4 {
+    margin-bottom: 50px;
+  }
 }
 section.home-section-5 {
   margin-left: 70px;
@@ -211,9 +383,10 @@ section.home-section-5 #sec5Tittle {
   text-align: center;
   color: #3E3E3E;
   font-weight: 700;
-  padding-left: 375px;
-  padding-right: 375px;
   margin-bottom: 25px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 section.home-section-5 #sec5TittleCaption {
   color: #626262;
@@ -222,36 +395,52 @@ section.home-section-5 #sec5TittleCaption {
   text-align: center;
 }
 section.home-section-5 .content1 {
-  margin-bottom: 130px;
-  margin-right: -50px;
-}
-section.home-section-5 .content5 {
-  margin-top: 45px;
+  margin-top: 5px;
+  margin-bottom: 105px;
   width: 100%;
 }
-section.home-section-5 .sec5Absolut1 {
-  z-index: 2;
-  position: absolute;
-  top: 210px;
-  left: 20px;
+section.home-section-5 .content5 {
+  margin-top: 20px;
+  width: 100%;
 }
-section.home-section-5 .sec5Absolut2 {
-  z-index: 2;
+section.home-section-5 .sec5-container-box1 {
+  width: 80%;
+  height: 150px;
+  background-color: white;
   position: absolute;
-  top: 625px;
-  left: 20px;
+  z-index: 3;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px grey;
+  top: 30%;
+  left: 10%;
 }
-section.home-section-5 .sec5Absolut5 {
-  z-index: 2;
+section.home-section-5 .sec5-container-box2 {
+  width: 80%;
+  height: 150px;
+  background-color: white;
   position: absolute;
-  top: 625px;
-  left: 20px;
+  z-index: 3;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px grey;
+  top: 80%;
+  left: 10%;
+}
+section.home-section-5 .sec5-container-box5 {
+  width: 80%;
+  height: 150px;
+  background-color: white;
+  position: absolute;
+  z-index: 3;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px grey;
+  top: 80%;
+  left: 10%;
 }
 section.home-section-5 .sec5BuildingType1 {
   z-index: 3;
   position: absolute;
-  top: 240px;
-  left: 60px;
+  top: 32%;
+  left: 15%;
 }
 section.home-section-5 .price1 {
   font-size: 16px;
@@ -259,8 +448,8 @@ section.home-section-5 .price1 {
   font-weight: 700;
   z-index: 3;
   position: absolute;
-  top: 245px;
-  left: 140px;
+  top: 32%;
+  left: 34%;
 }
 section.home-section-5 .propertyName1 {
   font-size: 16px;
@@ -268,46 +457,46 @@ section.home-section-5 .propertyName1 {
   color: #282F65;
   z-index: 3;
   position: absolute;
-  top: 275px;
-  left: 140px;
+  top: 35%;
+  left: 34%;
 }
 section.home-section-5 .propertyLocation1 {
   font-size: 16px;
   color: #AEAEAE;
   z-index: 4;
   position: absolute;
-  top: 305px;
-  left: 140px;
+  top: 39%;
+  left: 34%;
 }
 section.home-section-5 .bath1 {
   font-size: 16px;
   color: #626262;
   z-index: 3;
   position: absolute;
-  top: 345px;
-  left: 90px;
+  top: 44%;
+  left: 20%;
 }
 section.home-section-5 .bed1 {
   font-size: 16px;
   color: #626262;
   z-index: 3;
   position: absolute;
-  top: 345px;
-  left: 200px;
+  top: 44%;
+  left: 45%;
 }
 section.home-section-5 .size1 {
   font-size: 16px;
   color: #626262;
   z-index: 3;
   position: absolute;
-  top: 345px;
-  left: 300px;
+  top: 44%;
+  left: 72%;
 }
 section.home-section-5 .sec5BuildingType2 {
   z-index: 3;
   position: absolute;
-  top: 660px;
-  left: 60px;
+  top: 82%;
+  left: 15%;
 }
 section.home-section-5 .price2 {
   font-size: 16px;
@@ -315,8 +504,8 @@ section.home-section-5 .price2 {
   font-weight: 700;
   z-index: 3;
   position: absolute;
-  top: 665px;
-  left: 140px;
+  top: 82%;
+  left: 34%;
 }
 section.home-section-5 .propertyName2 {
   font-size: 16px;
@@ -324,46 +513,46 @@ section.home-section-5 .propertyName2 {
   color: #282F65;
   z-index: 3;
   position: absolute;
-  top: 695px;
-  left: 140px;
+  top: 85%;
+  left: 34%;
 }
 section.home-section-5 .propertyLocation2 {
   font-size: 16px;
   color: #AEAEAE;
   z-index: 4;
   position: absolute;
-  top: 725px;
-  left: 140px;
+  top: 89%;
+  left: 34%;
 }
 section.home-section-5 .bath2 {
   font-size: 16px;
   color: #626262;
   z-index: 3;
   position: absolute;
-  top: 760px;
-  left: 90px;
+  top: 94%;
+  left: 20%;
 }
 section.home-section-5 .bed2 {
   font-size: 16px;
   color: #626262;
   z-index: 3;
   position: absolute;
-  top: 760px;
-  left: 200px;
+  top: 94%;
+  left: 45%;
 }
 section.home-section-5 .size2 {
   font-size: 16px;
   color: #626262;
   z-index: 3;
   position: absolute;
-  top: 760px;
-  left: 300px;
+  top: 94%;
+  left: 72%;
 }
 section.home-section-5 .sec5BuildingType5 {
   z-index: 3;
   position: absolute;
-  top: 660px;
-  left: 60px;
+  top: 82%;
+  left: 15%;
 }
 section.home-section-5 .price5 {
   font-size: 16px;
@@ -371,8 +560,8 @@ section.home-section-5 .price5 {
   font-weight: 700;
   z-index: 3;
   position: absolute;
-  top: 665px;
-  left: 140px;
+  top: 82%;
+  left: 35%;
 }
 section.home-section-5 .propertyName5 {
   font-size: 16px;
@@ -380,38 +569,54 @@ section.home-section-5 .propertyName5 {
   color: #282F65;
   z-index: 3;
   position: absolute;
-  top: 695px;
-  left: 140px;
+  top: 85%;
+  left: 35%;
 }
 section.home-section-5 .propertyLocation5 {
   font-size: 16px;
   color: #AEAEAE;
   z-index: 4;
   position: absolute;
-  top: 725px;
-  left: 140px;
+  top: 89%;
+  left: 34%;
 }
 section.home-section-5 .bath5 {
   font-size: 16px;
   color: #626262;
   z-index: 3;
   position: absolute;
-  top: 760px;
-  left: 90px;
+  top: 94%;
+  left: 20%;
 }
 section.home-section-5 .bed5 {
   font-size: 16px;
   color: #626262;
   z-index: 3;
   position: absolute;
-  top: 760px;
-  left: 200px;
+  top: 94%;
+  left: 45%;
 }
 section.home-section-5 .size5 {
   font-size: 16px;
   color: #626262;
   z-index: 3;
   position: absolute;
-  top: 760px;
-  left: 300px;
+  top: 94%;
+  left: 72%;
+}
+section.home-section-5 .sec5ViewMore {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-5 .sec5ViewMore {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home-section-5 {
+    margin-bottom: -50px;
+  }
 }
